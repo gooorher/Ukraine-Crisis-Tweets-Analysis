@@ -1,6 +1,6 @@
 # Ukraine Crisis Twitter Analysis
 
-Aplicación web Flask para el análisis de tweets relacionados con la crisis de Ucrania. El dataset usado se ha extraído de Kaggle: [text](https://www.kaggle.com/datasets/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows) 
+Aplicación web Flask para el análisis de tweets relacionados con la crisis de Ucrania. El dataset usado se ha extraído de Kaggle: [Click aquí](https://www.kaggle.com/datasets/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows) 
 
 ## Requisitos previos
 
@@ -13,7 +13,7 @@ Aplicación web Flask para el análisis de tweets relacionados con la crisis de 
 
 1. Clona el repositorio:
 ```bash
-git clone <url-del-repositorio>
+git clone <https://github.com/gooorher/Ukraine-Crisis-Tweets-Analysis/>
 cd flask_app
 ```
 
