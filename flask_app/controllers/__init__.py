@@ -1,0 +1,1 @@
+from . import trends_controller

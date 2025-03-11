@@ -1,0 +1,369 @@
+{% extends "base.html" %}
+
+{% block title %}Tendencias - Ukraine Crisis Twitter Analysis{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <!-- Header -->
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">Análisis de Tendencias</h1>
+        <p class="mt-2 text-gray-600">Análisis temporal de tweets sobre la crisis de Ucrania</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="bg-white shadow rounded-lg p-4 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+                <label for="dateRange" class="block text-sm font-medium text-gray-700">Rango de fechas</label>
+                <select id="dateRange" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    <option value="7d">Últimos 7 días</option>
+                    <option value="30d" selected>Últimos 30 días</option>
+                    <option value="90d">Últimos 90 días</option>
+                    <option value="all">Todo el período</option>
+                </select>
+            </div>
+            <div class="md:col-span-2 flex justify-end items-end space-x-4">
+                <button onclick="exportData('csv')" class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                    Exportar CSV
+                </button>
+                <button onclick="exportData('json')" class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                    Exportar JSON
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Métricas Principales -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="text-sm font-medium text-gray-500">Total de Tweets</h3>
+            <p class="mt-1 text-3xl font-semibold text-gray-900" id="totalTweets">-</p>
+            <div class="mt-4">
+                <div class="text-sm text-gray-600" id="tweetsChange"></div>
+            </div>
+        </div>
+        <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="text-sm font-medium text-gray-500">Engagement Total</h3>
+            <p class="mt-1 text-3xl font-semibold text-gray-900" id="totalEngagement">-</p>
+            <div class="mt-4">
+                <div class="text-sm text-gray-600" id="engagementChange"></div>
+            </div>
+        </div>
+        <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="text-sm font-medium text-gray-500">Usuarios Únicos</h3>
+            <p class="mt-1 text-3xl font-semibold text-gray-900" id="uniqueUsers">-</p>
+            <div class="mt-4">
+                <div class="text-sm text-gray-600" id="usersChange"></div>
+            </div>
+        </div>
+        <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="text-sm font-medium text-gray-500">Engagement Promedio</h3>
+            <p class="mt-1 text-3xl font-semibold text-gray-900" id="avgEngagement">-</p>
+            <div class="mt-4">
+                <div class="text-sm text-gray-600" id="avgEngagementChange"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gráficos -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Volumen de Tweets -->
+        <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Volumen de Tweets</h3>
+            <div class="h-80">
+                <canvas id="volumeChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Engagement -->
+        <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Engagement</h3>
+            <div class="h-80">
+                <canvas id="engagementChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Distribución por Hora -->
+        <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Distribución por Hora</h3>
+            <div class="h-80">
+                <canvas id="hourlyChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Métricas de Interacción -->
+        <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Métricas de Interacción</h3>
+            <div class="h-80">
+                <canvas id="interactionChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<!-- Script para redirección automática -->
+<script>
+    if (window.location.pathname === '/') {
+        window.location.href = '/trends/#tendences';
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Configuración común para los gráficos
+const chartConfig = {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+        mode: 'index',
+        intersect: false,
+    },
+    plugins: {
+        legend: {
+            position: 'top',
+        },
+        tooltip: {
+            mode: 'index',
+            intersect: false
+        }
+    },
+    scales: {
+        x: {
+            grid: {
+                display: false
+            }
+        },
+        y: {
+            beginAtZero: true,
+            grid: {
+                color: 'rgba(0, 0, 0, 0.1)'
+            }
+        }
+    }
+};
+
+// Variables para almacenar las instancias de los gráficos
+let volumeChart, engagementChart, hourlyChart, interactionChart;
+
+// Función para formatear números grandes
+function formatNumber(num) {
+    if (num >= 1000000) {
+        return (num / 1000000).toFixed(1) + 'M';
+    }
+    if (num >= 1000) {
+        return (num / 1000).toFixed(1) + 'K';
+    }
+    return num.toString();
+}
+
+// Función para calcular el cambio porcentual
+function calculatePercentageChange(current, previous) {
+    if (!previous) return null;
+    const change = ((current - previous) / previous) * 100;
+    return change.toFixed(1);
+}
+
+// Función para actualizar las métricas principales
+function updateMetrics(data) {
+    const latest = data[data.length - 1];
+    const previous = data[data.length - 2];
+
+    // Actualizar valores
+    document.getElementById('totalTweets').innerText = formatNumber(latest.tweet_count);
+    document.getElementById('totalEngagement').innerText = formatNumber(latest.total_engagement);
+    document.getElementById('uniqueUsers').innerText = formatNumber(latest.unique_users);
+    document.getElementById('avgEngagement').innerText = formatNumber(latest.avg_engagement);
+
+    // Calcular y mostrar cambios
+    if (previous) {
+        const tweetChange = calculatePercentageChange(latest.tweet_count, previous.tweet_count);
+        const engagementChange = calculatePercentageChange(latest.total_engagement, previous.total_engagement);
+        const usersChange = calculatePercentageChange(latest.unique_users, previous.unique_users);
+        const avgEngagementChange = calculatePercentageChange(latest.avg_engagement, previous.avg_engagement);
+
+        document.getElementById('tweetsChange').innerHTML = `${tweetChange}% vs anterior`;
+        document.getElementById('engagementChange').innerHTML = `${engagementChange}% vs anterior`;
+        document.getElementById('usersChange').innerHTML = `${usersChange}% vs anterior`;
+        document.getElementById('avgEngagementChange').innerHTML = `${avgEngagementChange}% vs anterior`;
+    }
+}
+
+// Función para actualizar los gráficos
+function updateCharts(trendsData, volumeData, engagementData, hourlyData) {
+    const dates = trendsData.map(d => d.date);
+    const tweetCounts = trendsData.map(d => d.tweet_count);
+    const engagementTrends = trendsData.map(d => d.total_engagement);
+    
+    // Actualizar gráfico de volumen
+    if (volumeChart) {
+        volumeChart.destroy();
+    }
+    volumeChart = new Chart(document.getElementById('volumeChart').getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: dates,
+            datasets: [{
+                label: 'Volumen de Tweets',
+                data: tweetCounts,
+                borderColor: 'rgb(59, 130, 246)',
+                backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                fill: true
+            }]
+        },
+        options: chartConfig
+    });
+
+    // Actualizar gráfico de engagement
+    if (engagementChart) {
+        engagementChart.destroy();
+    }
+    engagementChart = new Chart(document.getElementById('engagementChart').getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: dates,
+            datasets: [{
+                label: 'Engagement Total',
+                data: engagementTrends,
+                borderColor: 'rgb(16, 185, 129)',
+                backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                fill: true
+            }]
+        },
+        options: chartConfig
+    });
+
+    // Actualizar gráfico de distribución horaria
+    if (hourlyChart) {
+        hourlyChart.destroy();
+    }
+    const hours = hourlyData.map(d => `${d.hour}:00`);
+    const counts = hourlyData.map(d => d.count);
+    hourlyChart = new Chart(document.getElementById('hourlyChart').getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels: hours,
+            datasets: [{
+                label: 'Tweets por Hora',
+                data: counts,
+                backgroundColor: 'rgba(239, 68, 68, 0.5)', // Rojo suave
+                borderColor: 'rgb(239, 68, 68)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            ...chartConfig,
+            scales: {
+                ...chartConfig.scales,
+                x: {
+                    ...chartConfig.scales.x,
+                    title: {
+                        display: true,
+                        text: 'Hora del día'
+                    }
+                },
+                y: {
+                    ...chartConfig.scales.y,
+                    title: {
+                        display: true,
+                        text: 'Número de tweets'
+                    }
+                }
+            }
+        }
+    });
+
+    // Actualizar gráfico de métricas de interacción
+    if (interactionChart) {
+        interactionChart.destroy();
+    }
+    interactionChart = new Chart(document.getElementById('interactionChart').getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: dates,
+            datasets: [
+                {
+                    label: 'Engagement Promedio',
+                    data: engagementData.map(d => d.avg_engagement),
+                    borderColor: 'rgb(156, 163, 175)', // Gris
+                    backgroundColor: 'rgba(156, 163, 175, 0.1)',
+                    fill: false
+                },
+                {
+                    label: 'Engagement Máximo',
+                    data: engagementData.map(d => d.max_engagement),
+                    borderColor: 'rgb(250, 204, 21)', // Amarillo suave
+                    backgroundColor: 'rgba(250, 204, 21, 0.1)',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            ...chartConfig,
+            scales: {
+                ...chartConfig.scales,
+                y: {
+                    ...chartConfig.scales.y,
+                    title: {
+                        display: true,
+                        text: 'Nivel de engagement'
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Función para cargar datos
+async function loadData() {
+    const dateRange = document.getElementById('dateRange').value;
+    try {
+        const [trendsResponse, volumeResponse, engagementResponse, hourlyResponse] = await Promise.all([
+            fetch(`/trends/api/data?range=${dateRange}`),
+            fetch(`/trends/api/volume?range=${dateRange}`),
+            fetch(`/trends/api/engagement?range=${dateRange}`),
+            fetch(`/trends/api/hourly?range=${dateRange}`)
+        ]);
+
+        if (!trendsResponse.ok || !volumeResponse.ok || !engagementResponse.ok || !hourlyResponse.ok) {
+            throw new Error('Error al cargar los datos');
+        }
+
+        const trends = await trendsResponse.json();
+        const volume = await volumeResponse.json();
+        const engagement = await engagementResponse.json();
+        const hourly = await hourlyResponse.json();
+
+        if (trends.success && volume.success && engagement.success && hourly.success) {
+            console.log('Datos horarios:', hourly.data); // Debug
+            console.log('Datos de engagement:', engagement.data); // Debug
+            updateMetrics(trends.data);
+            updateCharts(trends.data, volume.data, engagement.data, hourly.data);
+        } else {
+            throw new Error('Error en los datos recibidos');
+        }
+    } catch (error) {
+        console.error('Error loading data:', error);
+        // Mostrar mensaje de error al usuario
+        alert('Error al cargar los datos. Por favor, intente nuevamente.');
+    }
+}
+
+// Función para exportar datos
+function exportData(format) {
+    const dateRange = document.getElementById('dateRange').value;
+    window.location.href = `/trends/export/${format}?range=${dateRange}`;
+}
+
+// Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+    loadData();
+    document.getElementById('dateRange').addEventListener('change', loadData);
+});
+</script>
+
+<!-- Script para redirección automática a la sección de tendencias -->
+<script>
+    window.location.hash = "#tendences";
+</script>
+{% endblock %}

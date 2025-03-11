@@ -1,0 +1,400 @@
+{% extends "base.html" %}
+
+{% block title %}Hashtags - Ukraine Crisis Twitter Analysis{% endblock %}
+
+{% block head %}
+<link href="https://cdn.jsdelivr.net/npm/@mui/material@5.0.0/dist/mui/material.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <!-- Header -->
+    <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">Análisis de Hashtags</h1>
+        <p class="mt-2 text-gray-600">Análisis y visualización de patrones de uso de hashtags</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="bg-white shadow rounded-lg p-4 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+                <label for="dateRange" class="block text-sm font-medium text-gray-700">Rango de fechas</label>
+                <select id="dateRange" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    <option value="7d">Últimos 7 días</option>
+                    <option value="30d" selected>Últimos 30 días</option>
+                    <option value="90d">Últimos 90 días</option>
+                    <option value="all">Todo el período</option>
+                </select>
+            </div>
+            <div>
+                <label for="topHashtags" class="block text-sm font-medium text-gray-700">Número de hashtags</label>
+                <input type="number" id="topHashtags" min="5" max="50" value="20" 
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+            </div>
+            <div>
+                <label for="selectedHashtags" class="block text-sm font-medium text-gray-700">Hashtags específicos</label>
+                <select id="selectedHashtags" multiple size="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    <!-- Se llenará dinámicamente con los hashtags más frecuentes -->
+                </select>
+                <p class="mt-1 text-sm text-gray-500">Ctrl + click para seleccionar múltiples hashtags</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gráficos -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Frecuencia de Hashtags -->
+        <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Frecuencia de Hashtags</h3>
+            <div class="h-96">
+                <canvas id="frequencyChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Evolución Temporal -->
+        <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Evolución Temporal</h3>
+            <div class="h-96">
+                <canvas id="popularityChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Red de Co-ocurrencia -->
+        <div class="bg-white shadow rounded-lg p-4 lg:col-span-2">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Red de Co-ocurrencia de Hashtags</h3>
+            <div class="h-[600px]" id="networkChart"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/date-fns@2.29.3/index.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+// Configuración común para los gráficos de Chart.js
+const chartConfig = {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+        mode: 'index',
+        intersect: false
+    },
+    plugins: {
+        legend: {
+            position: 'top',
+        },
+        tooltip: {
+            mode: 'index',
+            intersect: false
+        }
+    }
+};
+
+// Variables para almacenar las instancias de los gráficos
+let frequencyChart, popularityChart, networkChart;
+
+// Función para formatear números grandes
+function formatNumber(num) {
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    return num.toString();
+}
+
+// Función para actualizar el gráfico de frecuencia
+async function updateFrequencyChart() {
+    const dateRange = document.getElementById('dateRange').value;
+    const limit = document.getElementById('topHashtags').value;
+    
+    try {
+        console.log('Fetching frequency data...'); // Debug
+        const response = await fetch(`/hashtags/api/frequency?range=${dateRange}&limit=${limit}`);
+        const data = await response.json();
+        console.log('Frequency data:', data); // Debug
+        
+        if (!data.success) throw new Error(data.error);
+        
+        const chartData = {
+            labels: data.data.map(d => '#' + d.hashtag),
+            datasets: [
+                {
+                    label: 'Frecuencia',
+                    data: data.data.map(d => d.count),
+                    backgroundColor: 'rgba(239, 68, 68, 0.5)',
+                    borderColor: 'rgb(239, 68, 68)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Engagement',
+                    data: data.data.map(d => d.avg_engagement),
+                    backgroundColor: 'rgba(59, 130, 246, 0.5)',
+                    borderColor: 'rgb(59, 130, 246)',
+                    borderWidth: 1,
+                    yAxisID: 'engagement'
+                }
+            ]
+        };
+        
+        if (frequencyChart) frequencyChart.destroy();
+        
+        frequencyChart = new Chart(document.getElementById('frequencyChart').getContext('2d'), {
+            type: 'bar',
+            data: chartData,
+            options: {
+                ...chartConfig,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Frecuencia'
+                        }
+                    },
+                    engagement: {
+                        position: 'right',
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Engagement Promedio'
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Actualizar select de hashtags y mantener selecciones previas
+        const select = document.getElementById('selectedHashtags');
+        const selectedValues = Array.from(select.selectedOptions).map(opt => opt.value);
+        select.innerHTML = data.data.map(d => 
+            `<option value="${d.hashtag}" ${selectedValues.includes(d.hashtag) ? 'selected' : ''}>#${d.hashtag}</option>`
+        ).join('');
+        
+        // Si no hay hashtags seleccionados, seleccionar los primeros 5
+        if (select.selectedOptions.length === 0) {
+            const options = Array.from(select.options).slice(0, 5);
+            options.forEach(opt => opt.selected = true);
+            updatePopularityChart(); // Actualizar gráfico con los hashtags seleccionados
+        }
+        
+    } catch (error) {
+        console.error('Error al actualizar gráfico de frecuencia:', error);
+        alert('Error al cargar datos de frecuencia');
+    }
+}
+
+// Función para actualizar el gráfico de popularidad
+async function updatePopularityChart() {
+    const dateRange = document.getElementById('dateRange').value;
+    const selectedHashtags = Array.from(document.getElementById('selectedHashtags').selectedOptions)
+        .map(option => option.value);
+    
+    try {
+        // Construir URL con parámetros
+        let url = `/hashtags/api/popularity?range=${dateRange}`;
+        selectedHashtags.forEach(hashtag => {
+            url += `&hashtags[]=${encodeURIComponent(hashtag)}`;
+        });
+        
+        console.log('Fetching popularity data from:', url); // Debug
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log('Popularity data:', data); // Debug
+        
+        if (!data.success) throw new Error(data.error);
+        
+        // Procesar datos para cada hashtag
+        const datasets = Object.entries(data.data).map(([hashtag, series]) => {
+            const color = getRandomColor();
+            // Transformar fechas a objetos Date
+            const processedData = series.map(point => ({
+                x: new Date(point.date),
+                y: point.count
+            }));
+            
+            return {
+                label: '#' + hashtag,
+                data: processedData,
+                borderColor: color,
+                backgroundColor: color.replace('rgb', 'rgba').replace(')', ', 0.1)'),
+                fill: false,
+                tension: 0.1
+            };
+        });
+        
+        if (popularityChart) popularityChart.destroy();
+        
+        popularityChart = new Chart(document.getElementById('popularityChart').getContext('2d'), {
+            type: 'line',
+            data: {
+                datasets: datasets
+            },
+            options: {
+                ...chartConfig,
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'day',
+                            displayFormats: {
+                                day: 'dd/MM'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Fecha'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Número de menciones'
+                        }
+                    }
+                },
+                plugins: {
+                    ...chartConfig.plugins,
+                    tooltip: {
+                        ...chartConfig.plugins.tooltip,
+                        callbacks: {
+                            title: function(context) {
+                                const date = new Date(context[0].parsed.x);
+                                return date.toLocaleDateString('es-ES', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+    } catch (error) {
+        console.error('Error al actualizar gráfico de popularidad:', error);
+        alert('Error al cargar datos de popularidad');
+    }
+}
+
+// Función para actualizar el gráfico de red
+async function updateNetworkChart() {
+    const dateRange = document.getElementById('dateRange').value;
+    
+    try {
+        console.log('Fetching network data...'); // Debug
+        const response = await fetch(`/hashtags/api/cooccurrence?range=${dateRange}`);
+        const data = await response.json();
+        console.log('Network data:', data); // Debug
+        
+        if (!data.success) throw new Error(data.error);
+        
+        const width = document.getElementById('networkChart').clientWidth;
+        const height = document.getElementById('networkChart').clientHeight;
+        
+        // Limpiar gráfico anterior
+        d3.select('#networkChart').selectAll('*').remove();
+        
+        // Crear SVG
+        const svg = d3.select('#networkChart')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height);
+            
+        // Crear simulación de fuerzas
+        const simulation = d3.forceSimulation(data.data.nodes)
+            .force('link', d3.forceLink(data.data.links)
+                .id(d => d.id)
+                .distance(100))
+            .force('charge', d3.forceManyBody()
+                .strength(-300))
+            .force('center', d3.forceCenter(width / 2, height / 2));
+            
+        // Dibujar enlaces
+        const link = svg.append('g')
+            .selectAll('line')
+            .data(data.data.links)
+            .join('line')
+            .attr('stroke', '#999')
+            .attr('stroke-opacity', 0.6)
+            .attr('stroke-width', d => Math.sqrt(d.value));
+            
+        // Dibujar nodos
+        const node = svg.append('g')
+            .selectAll('g')
+            .data(data.data.nodes)
+            .join('g');
+            
+        node.append('circle')
+            .attr('r', d => Math.sqrt(d.weight) + 5)
+            .attr('fill', 'rgb(239, 68, 68)')
+            .attr('stroke', '#fff')
+            .attr('stroke-width', 1.5);
+            
+        node.append('text')
+            .text(d => '#' + d.id)
+            .attr('x', 6)
+            .attr('y', 3)
+            .style('font-size', '10px');
+            
+        // Actualizar posiciones
+        simulation.on('tick', () => {
+            link
+                .attr('x1', d => d.source.x)
+                .attr('y1', d => d.source.y)
+                .attr('x2', d => d.target.x)
+                .attr('y2', d => d.target.y);
+                
+            node
+                .attr('transform', d => `translate(${d.x},${d.y})`);
+        });
+        
+        // Añadir zoom
+        const zoom = d3.zoom()
+            .scaleExtent([0.1, 4])
+            .on('zoom', (event) => {
+                svg.selectAll('g').attr('transform', event.transform);
+            });
+            
+        svg.call(zoom);
+        
+    } catch (error) {
+        console.error('Error al actualizar gráfico de red:', error);
+        alert('Error al cargar datos de co-ocurrencia');
+    }
+}
+
+// Función para generar colores aleatorios
+function getRandomColor() {
+    const colors = [
+        'rgb(239, 68, 68)',   // Rojo
+        'rgb(59, 130, 246)',  // Azul
+        'rgb(16, 185, 129)',  // Verde
+        'rgb(250, 204, 21)',  // Amarillo
+        'rgb(147, 51, 234)',  // Morado
+        'rgb(249, 115, 22)',  // Naranja
+        'rgb(236, 72, 153)',  // Rosa
+        'rgb(20, 184, 166)',  // Turquesa
+    ];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+// Eventos
+document.addEventListener('DOMContentLoaded', () => {
+    // Cargar datos iniciales
+    updateFrequencyChart();
+    
+    // Configurar eventos
+    document.getElementById('dateRange').addEventListener('change', () => {
+        updateFrequencyChart();
+        updatePopularityChart();
+        updateNetworkChart();
+    });
+    
+    document.getElementById('topHashtags').addEventListener('change', updateFrequencyChart);
+    document.getElementById('selectedHashtags').addEventListener('change', updatePopularityChart);
+});
+</script>
+{% endblock %}

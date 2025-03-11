@@ -1,0 +1,930 @@
+2025-02-20 21:59:10 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-20 21:59:10 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-20 21:59:10 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-20 21:59:10 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.206:5000
+2025-02-20 21:59:10 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-20 21:59:10 - werkzeug - INFO -  * Restarting with stat
+2025-02-20 21:59:10 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-20 21:59:10 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-20 21:59:10 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-20 21:59:10 - werkzeug - WARNING -  * Debugger is active!
+2025-02-20 21:59:10 - werkzeug - INFO -  * Debugger PIN: 460-058-197
+2025-02-20 21:59:14 - __main__ - ERROR - Error de conexión a MongoDB: 'Flask' object has no attribute 'mongo'
+2025-02-20 21:59:14 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 21:59:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-02-20 22:00:14 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/__init__.py', reloading
+2025-02-20 22:00:14 - werkzeug - INFO -  * Restarting with stat
+2025-02-20 22:00:14 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-20 22:00:14 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-20 22:00:14 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-20 22:00:14 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-20 22:00:14 - werkzeug - WARNING -  * Debugger is active!
+2025-02-20 22:00:14 - werkzeug - INFO -  * Debugger PIN: 460-058-197
+2025-02-20 22:00:19 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:19 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:19] "GET /trends/ HTTP/1.1" 200 -
+2025-02-20 22:00:19 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:19 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:19 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:19] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:19 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:19 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:19 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:19 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:19 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:19 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:19 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:19] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:19 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:19] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:19 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:19] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:26 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:26] "GET /trends/ HTTP/1.1" 200 -
+2025-02-20 22:00:26 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:26 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:26 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:26 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:26 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:26 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:26 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:26 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:26] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:26] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:26] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:26] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:29 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:29] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-20 22:00:31 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:31 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:31] "GET /trends/ HTTP/1.1" 200 -
+2025-02-20 22:00:31 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:31 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:31 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:31 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:31 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:31 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:31 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:31 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:00:31 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:31] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:31 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:31] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:31 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:31] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:31 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:00:31] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-20 22:00:34 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/app.py', reloading
+2025-02-20 22:00:35 - werkzeug - INFO -  * Restarting with stat
+2025-02-20 22:00:35 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-20 22:00:35 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-20 22:00:35 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-20 22:00:35 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-20 22:00:35 - werkzeug - WARNING -  * Debugger is active!
+2025-02-20 22:00:35 - werkzeug - INFO -  * Debugger PIN: 460-058-197
+2025-02-20 22:01:04 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-20 22:01:04 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-20 22:01:04 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-20 22:01:04 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-20 22:01:04 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.206:5000
+2025-02-20 22:01:04 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-20 22:01:04 - werkzeug - INFO -  * Restarting with stat
+2025-02-20 22:01:04 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-20 22:01:04 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-20 22:01:04 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-20 22:01:04 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-20 22:01:04 - werkzeug - WARNING -  * Debugger is active!
+2025-02-20 22:01:04 - werkzeug - INFO -  * Debugger PIN: 460-058-197
+2025-02-20 22:01:12 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:12] "[33mGET /t HTTP/1.1[0m" 404 -
+2025-02-20 22:01:16 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:16] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-20 22:01:22 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:22 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:22] "GET /trends/ HTTP/1.1" 200 -
+2025-02-20 22:01:22 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:22 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:22 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:22 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:22 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:22 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:22 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:22 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:22] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-20 22:01:22 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:22] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-20 22:01:22 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:22 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:22] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-20 22:01:22 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:22] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-20 22:01:44 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:44 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:44 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:44 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:44 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:44 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:44 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:44 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:48 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:48] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-20 22:01:48 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:48] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-20 22:01:54 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:54] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-20 22:01:56 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:56 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:56 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:56 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:56 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:56 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:56 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:56] "GET /trends/api/volume?range=90d HTTP/1.1" 200 -
+2025-02-20 22:01:56 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:56 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:01:56 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:56] "GET /trends/api/data?range=90d HTTP/1.1" 200 -
+2025-02-20 22:01:56 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:56] "GET /trends/api/hourly?range=90d HTTP/1.1" 200 -
+2025-02-20 22:01:56 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:01:56] "GET /trends/api/engagement?range=90d HTTP/1.1" 200 -
+2025-02-20 22:02:03 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:03] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-20 22:02:17 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:17 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:17 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:17 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:17 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:17 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:17 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:17 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:17] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-20 22:02:17 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:17] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-20 22:02:17 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-21 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:17 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:17] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-20 22:02:17 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:17] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-20 22:02:23 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:23 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:23 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:23 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:23 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:23 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:23 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:23 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:26 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:26 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:26 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:26] "GET /trends/api/data?range=90d HTTP/1.1" 200 -
+2025-02-20 22:02:26 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:26] "GET /trends/api/volume?range=90d HTTP/1.1" 200 -
+2025-02-20 22:02:26 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:26 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:26 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:26 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2024-11-22 00:00:00 - 2025-02-20 23:59:59.999999
+2025-02-20 22:02:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:26] "GET /trends/api/engagement?range=90d HTTP/1.1" 200 -
+2025-02-20 22:02:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:26] "GET /trends/api/hourly?range=90d HTTP/1.1" 200 -
+2025-02-20 22:02:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:26] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-20 22:02:26 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:26] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-20 22:02:33 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:33] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-20 22:02:41 - werkzeug - INFO - 127.0.0.1 - - [20/Feb/2025 22:02:41] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 08:41:08 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 08:41:08 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 08:41:08 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 08:41:08 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 08:41:08 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.206:5000
+2025-02-21 08:41:08 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-21 08:41:08 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 08:41:09 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 08:41:09 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 08:41:09 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 08:41:09 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 08:41:09 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 08:41:09 - werkzeug - INFO -  * Debugger PIN: 103-786-940
+2025-02-21 08:41:11 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:11] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-21 08:41:12 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-21 08:41:14 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:14 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:14] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 08:41:14 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:14 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:14 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:14 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:14 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:14 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:14 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:14 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:14 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:14] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 08:41:14 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:14] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 08:41:14 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:14] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 08:41:14 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:14] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 08:41:17 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:17 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:17 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:17 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:17 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:17 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:17] "GET /trends/api/data?range=90d HTTP/1.1" 200 -
+2025-02-21 08:41:17 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:17 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:17 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:17 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:17] "GET /trends/api/volume?range=90d HTTP/1.1" 200 -
+2025-02-21 08:41:17 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:17] "GET /trends/api/engagement?range=90d HTTP/1.1" 200 -
+2025-02-21 08:41:17 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:17] "GET /trends/api/hourly?range=90d HTTP/1.1" 200 -
+2025-02-21 08:41:46 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:46 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:46 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:46 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:46 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:46 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:46 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:46 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:49 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:49 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:49 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:49 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:49] "GET /trends/api/data?range=90d HTTP/1.1" 200 -
+2025-02-21 08:41:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:49] "GET /trends/api/volume?range=90d HTTP/1.1" 200 -
+2025-02-21 08:41:49 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:49 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:49] "GET /trends/api/engagement?range=90d HTTP/1.1" 200 -
+2025-02-21 08:41:49 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:49 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:41:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:49] "GET /trends/api/hourly?range=90d HTTP/1.1" 200 -
+2025-02-21 08:41:50 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:50] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 08:41:50 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:50] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 08:41:59 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:41:59] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 08:42:04 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:42:04] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 08:42:21 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:42:21 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:42:21 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:42:21 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:42:21 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:42:21 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:42:21 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:42:21 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 08:42:25 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:42:25] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 08:42:25 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:42:25] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 08:42:31 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:42:31] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 08:42:39 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 08:42:39] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 09:15:17 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 09:15:17] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 09:15:18 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 09:15:18] "GET /users/ HTTP/1.1" 200 -
+2025-02-21 09:15:20 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 09:15:20] "GET /language/ HTTP/1.1" 200 -
+2025-02-21 09:15:22 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 09:15:22] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 09:15:25 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 09:15:25] "GET /users/ HTTP/1.1" 200 -
+2025-02-21 09:15:35 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 09:15:35] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 09:25:03 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 09:25:03] "GET /geo/ HTTP/1.1" 200 -
+2025-02-21 09:25:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 09:25:05] "GET /language/ HTTP/1.1" 200 -
+2025-02-21 09:25:08 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 09:25:08] "GET /users/ HTTP/1.1" 200 -
+2025-02-21 09:25:10 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 09:25:10] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 10:02:35 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 10:02:35 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 10:02:35 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 10:02:35 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 10:02:36 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.206:5000
+2025-02-21 10:02:36 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-21 10:02:36 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 10:02:36 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 10:02:36 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 10:02:36 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 10:02:36 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 10:02:36 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 10:02:36 - werkzeug - INFO -  * Debugger PIN: 653-024-290
+2025-02-21 10:02:44 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:02:44] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-21 10:02:45 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:02:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-21 10:02:46 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:46 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:02:46] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 10:02:47 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:47 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:47 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:47 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:47 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:47 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:47 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:47 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:47 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:02:47] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 10:02:47 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:02:47] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 10:02:47 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:02:47] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 10:02:47 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:02:47] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 10:02:50 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:50 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:50 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:50 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:50 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:50 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:50 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:50 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:02:55 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:02:55] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 10:02:55 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:02:55] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 10:03:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:05] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 10:03:07 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:07 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:07] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 10:03:08 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:08 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:08 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:08 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:08 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:08 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:08 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:08] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 10:03:08 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:08 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:08 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:08] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 10:03:08 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:08] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 10:03:08 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:08] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 10:03:10 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:10] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 10:03:36 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:36 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:36 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:36 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:36 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:36 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:36 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:36 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:03:41 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:41] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 10:03:41 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:41] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 10:03:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:49] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 10:03:57 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:03:57] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 10:04:06 - flask_app.routes.trends_routes - INFO - Exportando datos en formato csv para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:06 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:23 - flask_app.routes.trends_routes - INFO - Exportando datos en formato csv para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:23 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:28 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:28] "GET /trends/export/csv?range=all HTTP/1.1" 200 -
+2025-02-21 10:04:34 - flask_app.routes.trends_routes - INFO - Exportando datos en formato json para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:34 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:39 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:39] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 10:04:41 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:41] "GET /users/ HTTP/1.1" 200 -
+2025-02-21 10:04:42 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:42] "GET /trends/export/csv?range=all HTTP/1.1" 200 -
+2025-02-21 10:04:43 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:43 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:43] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 10:04:43 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:43 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:43 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:43 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:43 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:43 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:43 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:43 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:43] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 10:04:43 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:43 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:43] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 10:04:43 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:43] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 10:04:43 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:43] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 10:04:46 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:46 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:46 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:46 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:46 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:46 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:46 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:46 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:04:50 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:50] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 10:04:50 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:50] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 10:04:55 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:55] "GET /trends/export/json?range=all HTTP/1.1" 200 -
+2025-02-21 10:04:57 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:04:57] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 10:05:06 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:05:06] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 10:13:53 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:53 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:13:53] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 10:13:54 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:54 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:54 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:54 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:54 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:54 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:54 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:54 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:13:54] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 10:13:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:13:54] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 10:13:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:13:54] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 10:13:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:13:54] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 10:13:58 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:58 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:58 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:58 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:58 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:58 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:58 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:13:58 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:14:02 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:14:02] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 10:14:03 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:14:03] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 10:14:10 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:14:10] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 10:14:18 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:14:18] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 10:18:37 - flask_app.routes.trends_routes - INFO - Exportando datos en formato csv para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:18:37 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:18:39 - flask_app.routes.trends_routes - INFO - Exportando datos en formato json para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:18:39 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:19:00 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:19:00] "GET /trends/export/csv?range=all HTTP/1.1" 200 -
+2025-02-21 10:19:02 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:19:02] "GET /trends/export/json?range=all HTTP/1.1" 200 -
+2025-02-21 10:20:30 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:30 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:20:30] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 10:20:30 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:30 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:30 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:30 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:20:30] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 10:20:30 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:30 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:30 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:30 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:30 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:30 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:20:30] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 10:20:30 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:20:30] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 10:20:30 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:20:30] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 10:20:36 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:36 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:36 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:36 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:36 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:36 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:36 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:36 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:20:41 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:20:41] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 10:20:42 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:20:42] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 10:20:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:20:49] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 10:20:57 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:20:57] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 10:21:45 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:21:45] "GET /users/ HTTP/1.1" 200 -
+2025-02-21 10:22:44 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:44 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:22:44] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 10:22:45 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:45 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:45 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:45 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:45 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:45 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:22:45] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 10:22:45 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:45 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:45 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:45 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:22:45] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 10:22:45 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:22:45] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 10:22:45 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:22:45] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 10:22:47 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:47 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:47 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:47 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:47 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:47 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:47 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:47 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:22:52 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:22:52] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 10:22:53 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:22:53] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 10:23:00 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:23:00] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 10:23:08 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:23:08] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 10:40:12 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:40:12] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 10:42:49 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:42:49] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 10:42:49 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:49 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:49 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:49 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:49 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:49 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:49 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:49 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:42:49] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 10:42:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:42:49] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 10:42:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:42:49] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 10:42:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:42:49] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 10:42:53 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:53 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:53 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:53 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:53 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:53 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:53 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:53 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 10:42:58 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:42:58] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 10:42:59 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:42:59] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 10:43:07 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:43:07] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 10:43:14 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:43:14] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 10:58:33 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/services/hashtags_service.py', reloading
+2025-02-21 10:58:33 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 10:58:33 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 10:58:33 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 10:58:33 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 10:58:33 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 10:58:34 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 10:58:34 - werkzeug - INFO -  * Debugger PIN: 653-024-290
+2025-02-21 10:59:05 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/routes/hashtags_routes.py', reloading
+2025-02-21 10:59:05 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 10:59:05 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 10:59:05 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 10:59:05 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 10:59:05 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 10:59:05 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 10:59:05 - werkzeug - INFO -  * Debugger PIN: 653-024-290
+2025-02-21 11:01:05 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:05 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:05 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:05 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:05 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:05] "GET /trends/api/data?range=90d HTTP/1.1" 200 -
+2025-02-21 11:01:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:05] "GET /trends/api/engagement?range=90d HTTP/1.1" 200 -
+2025-02-21 11:01:05 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:05 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:05 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:05] "GET /trends/api/hourly?range=90d HTTP/1.1" 200 -
+2025-02-21 11:01:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:05] "GET /trends/api/volume?range=90d HTTP/1.1" 200 -
+2025-02-21 11:01:15 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:15 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:15 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:15 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:15 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:15 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:15 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:15 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:20 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:20] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 11:01:21 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:21] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 11:01:29 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:29] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 11:01:32 - flask_app.routes.hashtags_routes - INFO - Cargando página de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:01:32 - flask_app.routes.hashtags_routes - ERROR - Error al cargar la página de hashtags: Could not build url for endpoint 'hashtags.hashtags'. Did you mean 'hashtags.hashtags_page' instead?
+Traceback (most recent call last):
+  File "/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/routes/hashtags_routes.py", line 16, in hashtags_page
+    return render_template('hashtags.html')
+  File "/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/venv/lib/python3.10/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/venv/lib/python3.10/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/venv/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/templates/hashtags.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/templates/base.html", line 19, in top-level template code
+    <a href="{{ url_for('hashtags.hashtags') }}" class="hover:text-gray-200">Hashtags</a>
+  File "/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/venv/lib/python3.10/site-packages/flask/app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/venv/lib/python3.10/site-packages/flask/app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'hashtags.hashtags'. Did you mean 'hashtags.hashtags_page' instead?
+
+2025-02-21 11:01:32 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:32] "[35m[1mGET /hashtags/ HTTP/1.1[0m" 500 -
+2025-02-21 11:01:32 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:32] "GET /hashtags/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-02-21 11:01:32 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:32] "GET /hashtags/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-02-21 11:01:32 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:32] "GET /hashtags/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-02-21 11:01:32 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:32] "[36mGET /hashtags/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-21 11:01:36 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:01:36] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 11:04:09 - flask_app.routes.hashtags_routes - INFO - Cargando página de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:04:09 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:04:09] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 11:04:15 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:04:15 - flask_app.routes.hashtags_routes - INFO - Obteniendo red de co-ocurrencia para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:04:15 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:04:15 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:04:15 - flask_app.services.hashtags_service - INFO - Consultando co-ocurrencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:04:15 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:04:15 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:04:31 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:04:31] "GET /hashtags/api/frequency?range=all&limit=20 HTTP/1.1" 200 -
+2025-02-21 11:04:48 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:04:48] "GET /hashtags/api/popularity?range=all HTTP/1.1" 200 -
+2025-02-21 11:04:57 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:04:57] "GET /hashtags/api/cooccurrence?range=all HTTP/1.1" 200 -
+2025-02-21 11:06:06 - flask_app.routes.hashtags_routes - INFO - Cargando página de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:06 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:06:06] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 11:06:08 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:08 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:08 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:08 - flask_app.routes.hashtags_routes - INFO - Obteniendo red de co-ocurrencia para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:08 - flask_app.services.hashtags_service - INFO - Consultando co-ocurrencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:08 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:08 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:06:08] "GET /hashtags/api/frequency?range=30d&limit=20 HTTP/1.1" 200 -
+2025-02-21 11:06:08 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:06:08] "GET /hashtags/api/cooccurrence?range=30d HTTP/1.1" 200 -
+2025-02-21 11:06:08 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:08 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:06:08] "GET /hashtags/api/popularity?range=30d HTTP/1.1" 200 -
+2025-02-21 11:06:11 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:11 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:11 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:11 - flask_app.routes.hashtags_routes - INFO - Obteniendo red de co-ocurrencia para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:11 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:11 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:11 - flask_app.services.hashtags_service - INFO - Consultando co-ocurrencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:06:26 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:06:26] "GET /hashtags/api/frequency?range=all&limit=20 HTTP/1.1" 200 -
+2025-02-21 11:06:44 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:06:44] "GET /hashtags/api/popularity?range=all HTTP/1.1" 200 -
+2025-02-21 11:06:51 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:06:51] "GET /hashtags/api/cooccurrence?range=all HTTP/1.1" 200 -
+2025-02-21 11:22:09 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:09 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:22:09] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 11:22:10 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:10 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:10 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:10 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:10 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:10 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:10 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:22:10] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 11:22:10 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:22:10] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 11:22:10 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:22:10] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 11:22:10 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:10 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:10 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:22:10] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 11:22:12 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:12 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:12 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:12 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:12 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:12 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:12 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:12 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:22:16 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:22:16] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 11:22:16 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:22:16] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 11:22:22 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:22:22] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 11:22:31 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:22:31] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 11:24:51 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/services/hashtags_service.py', reloading
+2025-02-21 11:24:52 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 11:24:52 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 11:24:52 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 11:24:52 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 11:24:52 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 11:24:52 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 11:24:52 - werkzeug - INFO -  * Debugger PIN: 653-024-290
+2025-02-21 11:25:44 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/routes/hashtags_routes.py', reloading
+2025-02-21 11:25:44 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 11:25:44 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 11:25:44 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 11:25:44 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 11:25:44 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 11:25:44 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 11:25:44 - werkzeug - INFO -  * Debugger PIN: 653-024-290
+2025-02-21 11:36:44 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/services/hashtags_service.py', reloading
+2025-02-21 11:36:44 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 11:36:44 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 11:36:44 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 11:36:44 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 11:36:44 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 11:36:44 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 11:36:44 - werkzeug - INFO -  * Debugger PIN: 653-024-290
+2025-02-21 11:38:26 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/routes/hashtags_routes.py', reloading
+2025-02-21 11:38:26 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 11:38:26 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 11:38:26 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 11:38:26 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 11:38:26 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 11:38:26 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 11:38:26 - werkzeug - INFO -  * Debugger PIN: 653-024-290
+2025-02-21 11:41:53 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/utils/date_utils.py', reloading
+2025-02-21 11:41:53 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 11:41:53 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 11:41:53 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 11:41:53 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 11:41:53 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 11:41:53 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 11:41:53 - werkzeug - INFO -  * Debugger PIN: 653-024-290
+2025-02-21 11:42:47 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/test_hashtags.py', reloading
+2025-02-21 11:42:47 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 11:42:47 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 11:42:47 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 11:42:47 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 11:42:47 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 11:42:47 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 11:42:47 - werkzeug - INFO -  * Debugger PIN: 653-024-290
+2025-02-21 11:43:21 - flask_app.routes.hashtags_routes - INFO - Cargando página de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:21 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:43:21] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 11:43:23 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:23 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:23 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:43:23] "GET /hashtags/api/frequency?range=30d&limit=20 HTTP/1.1" 200 -
+2025-02-21 11:43:23 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:23 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:23 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:23 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:43:23] "GET /hashtags/api/popularity?range=30d HTTP/1.1" 200 -
+2025-02-21 11:43:25 - flask_app.routes.hashtags_routes - INFO - Obteniendo red de co-ocurrencia para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:25 - flask_app.services.hashtags_service - INFO - Consultando co-ocurrencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:25 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:25 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:25 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:25 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:25 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:37 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:43:37] "GET /hashtags/api/frequency?range=all&limit=20 HTTP/1.1" 200 -
+2025-02-21 11:43:38 - flask_app.routes.hashtags_routes - INFO - Hashtags solicitados: ['Ukraine', 'Russia', 'Bucha', 'Putin', 'StandWithUkraine']
+2025-02-21 11:43:38 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:38 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:43:48 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:43:48] "GET /hashtags/api/popularity?range=all HTTP/1.1" 200 -
+2025-02-21 11:43:48 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:43:48] "GET /hashtags/api/popularity?range=all&hashtags[]=Ukraine&hashtags[]=Russia&hashtags[]=Bucha&hashtags[]=Putin&hashtags[]=StandWithUkraine HTTP/1.1" 200 -
+2025-02-21 11:44:03 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:44:03] "GET /hashtags/api/cooccurrence?range=all HTTP/1.1" 200 -
+2025-02-21 11:45:29 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/utils/__init__.py', reloading
+2025-02-21 11:45:29 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 11:45:29 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 11:45:29 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 11:45:29 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 11:45:29 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 11:45:29 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 11:45:29 - werkzeug - INFO -  * Debugger PIN: 653-024-290
+2025-02-21 11:46:04 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:46:04] "GET /users/ HTTP/1.1" 200 -
+2025-02-21 11:49:31 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:31 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:49:31] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 11:49:31 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:31 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:31 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:31 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:31 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:31 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:31 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:49:31] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 11:49:31 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:31 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:49:31] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 11:49:31 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:31 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:49:31] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 11:49:31 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:49:31] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 11:49:34 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:34 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:34 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:34 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:34 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:34 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:34 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:34 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:49:38 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:49:38] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 11:49:38 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:49:38] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 11:49:44 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:49:44] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 11:49:53 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:49:53] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 11:50:20 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:20 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:20 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:20 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:20 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:20 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:20 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:20 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2024-11-23 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:20 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:20] "GET /trends/api/data?range=90d HTTP/1.1" 200 -
+2025-02-21 11:50:20 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:20] "GET /trends/api/engagement?range=90d HTTP/1.1" 200 -
+2025-02-21 11:50:20 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:20] "GET /trends/api/volume?range=90d HTTP/1.1" 200 -
+2025-02-21 11:50:20 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:20] "GET /trends/api/hourly?range=90d HTTP/1.1" 200 -
+2025-02-21 11:50:27 - flask_app.routes.hashtags_routes - INFO - Cargando página de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:27 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:27] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 11:50:27 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:27 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:27 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:27] "GET /hashtags/api/frequency?range=30d&limit=20 HTTP/1.1" 200 -
+2025-02-21 11:50:27 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:27 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:27 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:27 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:27] "GET /hashtags/api/popularity?range=30d HTTP/1.1" 200 -
+2025-02-21 11:50:30 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:30 - flask_app.routes.hashtags_routes - INFO - Obteniendo red de co-ocurrencia para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:30 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:30 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:30 - flask_app.services.hashtags_service - INFO - Consultando co-ocurrencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:30 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:30 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:42 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:42] "GET /hashtags/api/frequency?range=all&limit=20 HTTP/1.1" 200 -
+2025-02-21 11:50:42 - flask_app.routes.hashtags_routes - INFO - Hashtags solicitados: ['Ukraine', 'Russia', 'Bucha', 'Putin', 'StandWithUkraine']
+2025-02-21 11:50:42 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:42 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 11:50:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:54] "GET /hashtags/api/popularity?range=all HTTP/1.1" 200 -
+2025-02-21 11:50:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:54] "GET /hashtags/api/popularity?range=all&hashtags[]=Ukraine&hashtags[]=Russia&hashtags[]=Bucha&hashtags[]=Putin&hashtags[]=StandWithUkraine HTTP/1.1" 200 -
+2025-02-21 11:51:07 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:51:07] "GET /hashtags/api/cooccurrence?range=all HTTP/1.1" 200 -
+2025-02-21 12:21:54 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:21:54] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 12:21:54 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:54 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:54 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:54 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:54 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:54 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:54 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:21:54] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 12:21:54 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:21:54] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 12:21:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:21:54] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 12:21:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:21:54] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 12:21:57 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:57 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:57 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:57 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:57 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:57 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:57 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:21:57 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:01 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:22:01] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 12:22:01 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:22:01] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 12:22:07 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:22:07] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 12:22:16 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:22:16] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 12:22:48 - flask_app.routes.hashtags_routes - INFO - Cargando página de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:48 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:22:48] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 12:22:48 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:48 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:48 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:22:48] "GET /hashtags/api/frequency?range=30d&limit=20 HTTP/1.1" 200 -
+2025-02-21 12:22:49 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:49 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:49 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:49 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:22:49] "GET /hashtags/api/popularity?range=30d HTTP/1.1" 200 -
+2025-02-21 12:22:51 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:51 - flask_app.routes.hashtags_routes - INFO - Obteniendo red de co-ocurrencia para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:51 - flask_app.services.hashtags_service - INFO - Consultando co-ocurrencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:51 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:51 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:51 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:22:51 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:23:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:23:05] "GET /hashtags/api/frequency?range=all&limit=20 HTTP/1.1" 200 -
+2025-02-21 12:23:05 - flask_app.routes.hashtags_routes - INFO - Hashtags solicitados: ['Ukraine', 'Russia', 'Bucha', 'Putin', 'StandWithUkraine']
+2025-02-21 12:23:05 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:23:05 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:23:16 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:23:16] "GET /hashtags/api/popularity?range=all HTTP/1.1" 200 -
+2025-02-21 12:23:16 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:23:16] "GET /hashtags/api/popularity?range=all&hashtags[]=Ukraine&hashtags[]=Russia&hashtags[]=Bucha&hashtags[]=Putin&hashtags[]=StandWithUkraine HTTP/1.1" 200 -
+2025-02-21 12:23:28 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:23:28] "GET /hashtags/api/cooccurrence?range=all HTTP/1.1" 200 -
+2025-02-21 12:24:27 - flask_app.routes.hashtags_routes - INFO - Hashtags solicitados: ['Kyiv']
+2025-02-21 12:24:27 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:27 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:28 - flask_app.routes.hashtags_routes - INFO - Hashtags solicitados: ['Mariupol', 'Kyiv']
+2025-02-21 12:24:28 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:28 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:28 - flask_app.routes.hashtags_routes - INFO - Hashtags solicitados: ['Mariupol', 'Russian', 'Kyiv']
+2025-02-21 12:24:28 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:28 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:33 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:24:33] "GET /hashtags/api/popularity?range=all&hashtags[]=Kyiv HTTP/1.1" 200 -
+2025-02-21 12:24:34 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:24:34] "GET /hashtags/api/popularity?range=all&hashtags[]=Mariupol&hashtags[]=Kyiv HTTP/1.1" 200 -
+2025-02-21 12:24:34 - flask_app.routes.hashtags_routes - INFO - Hashtags solicitados: ['Mariupol', 'Kyiv']
+2025-02-21 12:24:34 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:34 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:35 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:24:35] "GET /hashtags/api/popularity?range=all&hashtags[]=Mariupol&hashtags[]=Russian&hashtags[]=Kyiv HTTP/1.1" 200 -
+2025-02-21 12:24:39 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:39 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:24:39] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 12:24:40 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:24:40] "GET /hashtags/api/popularity?range=all&hashtags[]=Mariupol&hashtags[]=Kyiv HTTP/1.1" 200 -
+2025-02-21 12:24:41 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:41 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:24:41] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 12:24:43 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:43 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:43 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:43 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:43 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:43 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:43 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:43 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:24:43 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:24:43] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 12:24:43 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:24:43] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 12:24:43 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:24:43] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 12:24:43 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:24:43] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 12:26:23 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:26:23 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:26:23 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:26:23 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:26:23 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:26:23 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:26:23 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:26:23 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 12:26:26 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:26:26] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 12:26:26 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:26:26] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 12:26:33 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:26:33] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 12:26:41 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:26:41] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 16:32:53 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 16:32:53 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 16:32:53 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 16:32:53 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 16:32:53 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+2025-02-21 16:32:53 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-21 16:32:53 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 16:32:53 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 16:32:53 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 16:32:53 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 16:32:53 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 16:32:53 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 16:32:53 - werkzeug - INFO -  * Debugger PIN: 950-019-112
+2025-02-21 16:32:59 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:32:59] "[33mGET / HTTP/1.1[0m" 404 -
+2025-02-21 16:33:01 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-21 16:33:04 - flask_app.routes.trends_routes - INFO - Obteniendo tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:04 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:04] "GET /trends/ HTTP/1.1" 200 -
+2025-02-21 16:33:05 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:05 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:05 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:05 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:05 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:05 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:05] "GET /trends/api/hourly?range=30d HTTP/1.1" 200 -
+2025-02-21 16:33:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:05] "GET /trends/api/volume?range=30d HTTP/1.1" 200 -
+2025-02-21 16:33:05 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:05 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:05] "GET /trends/api/data?range=30d HTTP/1.1" 200 -
+2025-02-21 16:33:05 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:05] "GET /trends/api/engagement?range=30d HTTP/1.1" 200 -
+2025-02-21 16:33:09 - flask_app.routes.trends_routes - INFO - Obteniendo datos de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:09 - flask_app.routes.trends_routes - INFO - Obteniendo datos de volumen para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:09 - flask_app.routes.trends_routes - INFO - Obteniendo datos de tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:09 - flask_app.services.trends_service - INFO - Consultando métricas de engagement para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:09 - flask_app.services.trends_service - INFO - Consultando volumen de tweets para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:09 - flask_app.routes.trends_routes - INFO - Obteniendo distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:09 - flask_app.services.trends_service - INFO - Consultando tendencias para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:09 - flask_app.services.trends_service - INFO - Consultando distribución horaria para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:15 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:15] "GET /trends/api/hourly?range=all HTTP/1.1" 200 -
+2025-02-21 16:33:15 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:15] "GET /trends/api/volume?range=all HTTP/1.1" 200 -
+2025-02-21 16:33:25 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:25] "GET /trends/api/engagement?range=all HTTP/1.1" 200 -
+2025-02-21 16:33:30 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:30] "GET /trends/api/data?range=all HTTP/1.1" 200 -
+2025-02-21 16:33:40 - flask_app.routes.hashtags_routes - INFO - Cargando página de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:40 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:40] "GET /hashtags/ HTTP/1.1" 200 -
+2025-02-21 16:33:41 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:41 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:41 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:41] "GET /hashtags/api/frequency?range=30d&limit=20 HTTP/1.1" 200 -
+2025-02-21 16:33:41 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:41 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:41 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2025-01-22 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:41 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:33:41] "GET /hashtags/api/popularity?range=30d HTTP/1.1" 200 -
+2025-02-21 16:33:52 - flask_app.routes.hashtags_routes - INFO - Obteniendo frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:52 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:52 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:52 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:52 - flask_app.routes.hashtags_routes - INFO - Obteniendo red de co-ocurrencia para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:52 - flask_app.services.hashtags_service - INFO - Consultando co-ocurrencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:33:52 - flask_app.services.hashtags_service - INFO - Consultando frecuencia de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:34:08 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:34:08] "GET /hashtags/api/frequency?range=all&limit=20 HTTP/1.1" 200 -
+2025-02-21 16:34:08 - flask_app.routes.hashtags_routes - INFO - Hashtags solicitados: ['Ukraine', 'Russia', 'Bucha', 'Putin', 'StandWithUkraine']
+2025-02-21 16:34:08 - flask_app.routes.hashtags_routes - INFO - Obteniendo evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:34:08 - flask_app.services.hashtags_service - INFO - Consultando evolución de hashtags para el rango: 2022-01-01 00:00:00 - 2025-02-21 23:59:59.999999
+2025-02-21 16:34:19 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:34:19] "GET /hashtags/api/popularity?range=all&hashtags[]=Ukraine&hashtags[]=Russia&hashtags[]=Bucha&hashtags[]=Putin&hashtags[]=StandWithUkraine HTTP/1.1" 200 -
+2025-02-21 16:34:19 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:34:19] "GET /hashtags/api/popularity?range=all HTTP/1.1" 200 -
+2025-02-21 16:34:31 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:34:31] "GET /hashtags/api/cooccurrence?range=all HTTP/1.1" 200 -
+2025-02-21 16:37:37 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 16:37:37] "GET /users/ HTTP/1.1" 200 -
+2025-02-21 19:44:08 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 19:44:08 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 19:44:08 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 19:44:08 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 19:44:08 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.10.2:5000
+2025-02-21 19:44:08 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-21 19:44:08 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 19:44:09 - flask_app.routes - INFO - Blueprints cargados correctamente
+2025-02-21 19:44:09 - flask_app - INFO - Blueprints registrados correctamente
+2025-02-21 19:44:09 - flask_app - INFO - Conexión a MongoDB establecida correctamente
+2025-02-21 19:44:09 - __main__ - INFO - Iniciando aplicación Flask...
+2025-02-21 19:44:09 - werkzeug - WARNING -  * Debugger is active!
+2025-02-21 19:44:09 - werkzeug - INFO -  * Debugger PIN: 141-844-241
+2025-02-21 19:46:17 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 19:46:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-21 19:59:54 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 19:59:54] "GET /users/ HTTP/1.1" 200 -
+2025-02-21 20:08:07 - werkzeug - INFO -  * Detected change in '/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/routes/users_routes.py', reloading
+2025-02-21 20:08:08 - werkzeug - INFO -  * Restarting with stat
+2025-02-21 20:08:08 - flask_app.routes - ERROR - Error al cargar blueprints: cannot import name 'users_service' from 'flask_app.services' (/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/services/__init__.py)
+2025-02-21 20:08:08 - flask_app - ERROR - Error al registrar blueprints: cannot import name 'users_service' from 'flask_app.services' (/home/juanlu/Documents/Master/TFM/mongodb_project/flask_app/services/__init__.py)

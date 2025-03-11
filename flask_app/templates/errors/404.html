@@ -1,0 +1,114 @@
+{% extends "errors/base_error.html" %}
+
+{% block error_title %}Página no encontrada{% endblock %}
+
+{% block error_description %}
+<div class="text-center">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">¡Oops! Página no encontrada</h2>
+    
+    <div class="bg-white shadow rounded-lg p-6 max-w-2xl mx-auto">
+        <div class="text-left mb-8">
+            <p class="text-gray-600 mb-4">
+                Lo sentimos, la página que estás buscando no existe o ha sido movida.
+            </p>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm text-blue-700">
+                            URL solicitada: <code class="font-mono">{{ request.url }}</code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">¿Qué puedo hacer?</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                    <li>Verificar que la URL esté correctamente escrita</li>
+                    <li>Regresar a la página anterior</li>
+                    <li>Ir a la página principal</li>
+                    <li>Usar la navegación superior para encontrar lo que buscas</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">Secciones principales</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="{{ url_for('trends.trends_page') }}"
+                       class="block p-4 bg-white border rounded-lg hover:bg-gray-50">
+                        <h4 class="font-medium text-gray-900">Tendencias</h4>
+                        <p class="text-sm text-gray-500">Análisis de tendencias temporales</p>
+                    </a>
+                    
+                    <a href="{{ url_for('hashtags.hashtags_page') }}" 
+                       class="block p-4 bg-white border rounded-lg hover:bg-gray-50">
+                        <h4 class="font-medium text-gray-900">Hashtags</h4>
+                        <p class="text-sm text-gray-500">Análisis de hashtags populares</p>
+                    </a>
+                    
+                    <a href="{{ url_for('users.users_page') }}" 
+                       class="block p-4 bg-white border rounded-lg hover:bg-gray-50">
+                        <h4 class="font-medium text-gray-900">Usuarios</h4>
+                        <p class="text-sm text-gray-500">Análisis de usuarios activos</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 flex justify-center space-x-4">
+            <button onclick="history.back()" 
+                    class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                Volver atrás
+            </button>
+            
+            <a href="{{ url_for('trends.trends_page') }}"
+               class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                Ir al inicio
+            </a>
+        </div>
+    </div>
+</div>
+
+{% if debug %}
+<div class="mt-8 bg-gray-100 rounded-lg p-4 max-w-2xl mx-auto">
+    <h3 class="text-lg font-medium text-gray-900 mb-2">Información de depuración</h3>
+    <div class="space-y-2 text-sm text-gray-600">
+        <p><strong>Error ID:</strong> <code class="font-mono">{{ error_id }}</code></p>
+        <p><strong>Timestamp:</strong> <code class="font-mono">{{ timestamp }}</code></p>
+        <p><strong>Path:</strong> <code class="font-mono">{{ request.path }}</code></p>
+        <p><strong>Method:</strong> <code class="font-mono">{{ request.method }}</code></p>
+        <p><strong>Referrer:</strong> <code class="font-mono">{{ request.referrer or 'None' }}</code></p>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Registrar el error 404 en analytics si está disponible
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'error_404', {
+            'event_category': 'Error',
+            'event_label': window.location.pathname,
+            'value': 1
+        });
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "errors/base_error.html" %}
+
+{% block error_title %}Error en el Análisis de Usuarios{% endblock %}
+
+{% block error_description %}
+<div class="text-center">
+    <h2 class="text-xl font-semibold mb-4">Ha ocurrido un error al procesar los datos de usuarios</h2>
+    
+    <div class="bg-white shadow rounded-lg p-6 max-w-2xl mx-auto">
+        <div class="text-left">
+            <h3 class="font-medium mb-2">Posibles causas:</h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+                <li>Usuario no encontrado o no disponible</li>
+                <li>Rango de fechas demasiado grande o inválido</li>
+                <li>Error en la conexión con la base de datos</li>
+                <li>Error en el procesamiento de los datos de usuarios</li>
+            </ul>
+        </div>
+
+        <div class="mt-6 text-left">
+            <h3 class="font-medium mb-2">Sugerencias:</h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+                <li>Verifica que el usuario especificado exista</li>
+                <li>Intenta reducir el rango de fechas seleccionado</li>
+                <li>Refresca la página e intenta nuevamente</li>
+                <li>Si el problema persiste, contacta al administrador</li>
+            </ul>
+        </div>
+
+        <div class="mt-6 space-y-4">
+            <div class="text-sm text-gray-500">
+                {% if error_message %}
+                <p class="font-mono bg-gray-100 p-2 rounded">{{ error_message }}</p>
+                {% endif %}
+            </div>
+
+            <div class="flex space-x-4 justify-center mt-6">
+                <a href="{{ url_for('users.users_page') }}" 
+                   class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Volver a intentar
+                </a>
+                <a href="{{ url_for('trends.trends_page') }}"
+                   class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Ir a Tendencias
+                </a>
+            </div>
+        </div>
+
+        {% if debug_info %}
+        <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+            <h4 class="font-medium mb-2">Información de depuración:</h4>
+            <pre class="text-xs overflow-x-auto">{{ debug_info }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Registrar el error en los logs del cliente
+    console.error('Error en la página de usuarios:', {
+        timestamp: new Date().toISOString(),
+        path: window.location.pathname,
+        error: {{ error_message|tojson|safe if error_message else 'null' }}
+    });
+    
+    // Enviar error al servidor para logging (opcional)
+    fetch('/api/log-error', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            page: 'users',
+            error: {{ error_message|tojson|safe if error_message else 'null' }},
+            timestamp: new Date().toISOString()
+        })
+    }).catch(console.error); // Ignorar errores del logging
+});
+</script>
+{% endblock %}

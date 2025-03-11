@@ -1,0 +1,153 @@
+{% extends "errors/base_error.html" %}
+
+{% block error_title %}Error Interno del Servidor{% endblock %}
+
+{% block error_description %}
+<div class="text-center">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Error Interno del Servidor</h2>
+    
+    <div class="bg-white shadow rounded-lg p-6 max-w-2xl mx-auto">
+        <div class="text-left mb-8">
+            <p class="text-gray-600 mb-4">
+                Lo sentimos, ha ocurrido un error inesperado mientras procesábamos tu solicitud.
+                Nuestro equipo técnico ha sido notificado y estamos trabajando para solucionarlo.
+            </p>
+            
+            <div class="bg-red-50 border-l-4 border-red-400 p-4">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-sm font-medium text-red-800">
+                            Error ID: <code class="font-mono">{{ error_id }}</code>
+                        </h3>
+                        {% if error_message %}
+                        <div class="mt-2 text-sm text-red-700">
+                            <p>{{ error_message }}</p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">Acciones sugeridas</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                    <li>Recargar la página e intentar nuevamente</li>
+                    <li>Limpiar la caché del navegador</li>
+                    <li>Intentar más tarde</li>
+                    <li>Contactar al soporte técnico si el problema persiste</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-medium text-gray-900 mb-2">Mientras tanto, puedes</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="{{ url_for('trends.trends_page') }}"
+                       class="block p-4 bg-white border rounded-lg hover:bg-gray-50">
+                        <h4 class="font-medium text-gray-900">Tendencias</h4>
+                        <p class="text-sm text-gray-500">Ver tendencias generales</p>
+                    </a>
+                    
+                    <a href="{{ url_for('hashtags.hashtags_page') }}" 
+                       class="block p-4 bg-white border rounded-lg hover:bg-gray-50">
+                        <h4 class="font-medium text-gray-900">Hashtags</h4>
+                        <p class="text-sm text-gray-500">Explorar hashtags populares</p>
+                    </a>
+                    
+                    <a href="{{ url_for('users.users_page') }}" 
+                       class="block p-4 bg-white border rounded-lg hover:bg-gray-50">
+                        <h4 class="font-medium text-gray-900">Usuarios</h4>
+                        <p class="text-sm text-gray-500">Analizar usuarios activos</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 flex justify-center space-x-4">
+            <button onclick="window.location.reload()" 
+                    class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+                Reintentar
+            </button>
+            
+            <button onclick="history.back()" 
+                    class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                Volver atrás
+            </button>
+        </div>
+    </div>
+</div>
+
+{% if debug %}
+<div class="mt-8 bg-gray-100 rounded-lg p-4 max-w-4xl mx-auto">
+    <div class="mb-4 flex justify-between items-center">
+        <h3 class="text-lg font-medium text-gray-900">Información de depuración</h3>
+        <button onclick="copyDebugInfo()" 
+                class="text-sm text-blue-600 hover:text-blue-800 focus:outline-none">
+            Copiar información
+        </button>
+    </div>
+    
+    <div id="debugInfo" class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div>
+                <p><strong>Error ID:</strong> <code class="font-mono">{{ error_id }}</code></p>
+                <p><strong>Timestamp:</strong> <code class="font-mono">{{ timestamp }}</code></p>
+                <p><strong>Path:</strong> <code class="font-mono">{{ request.path }}</code></p>
+                <p><strong>Method:</strong> <code class="font-mono">{{ request.method }}</code></p>
+            </div>
+            <div>
+                <p><strong>User Agent:</strong> <code class="font-mono">{{ request.user_agent }}</code></p>
+                <p><strong>IP:</strong> <code class="font-mono">{{ request.remote_addr }}</code></p>
+                <p><strong>Referrer:</strong> <code class="font-mono">{{ request.referrer or 'None' }}</code></p>
+            </div>
+        </div>
+
+        {% if error_message %}
+        <div class="bg-gray-800 rounded p-4 overflow-x-auto">
+            <pre class="text-white text-sm"><code>{{ error_message }}</code></pre>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Registrar el error en analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'error_500', {
+            'event_category': 'Error',
+            'event_label': '{{ error_id }}',
+            'value': 1
+        });
+    }
+});
+
+function copyDebugInfo() {
+    const debugInfo = document.getElementById('debugInfo');
+    const textToCopy = debugInfo.innerText;
+    
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('Información de depuración copiada al portapapeles');
+    }).catch(err => {
+        console.error('Error al copiar:', err);
+        alert('No se pudo copiar la información. Por favor, inténtalo manualmente.');
+    });
+}
+</script>
+{% endblock %}

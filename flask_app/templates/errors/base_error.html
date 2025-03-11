@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}{% block error_title %}Error{% endblock %} - Ukraine Crisis Twitter Analysis{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-100 flex flex-col">
+    <div class="flex-grow container mx-auto px-4 py-12">
+        <!-- Icono de Error -->
+        <div class="text-center mb-8">
+            <div class="inline-block p-4 bg-red-100 rounded-full">
+                <svg class="w-16 h-16 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Contenido del Error -->
+        {% block error_description %}
+        <div class="text-center">
+            <h2 class="text-xl font-semibold mb-4">Ha ocurrido un error</h2>
+            <p class="text-gray-600">Por favor, intenta nuevamente más tarde.</p>
+        </div>
+        {% endblock %}
+
+        <!-- Navegación -->
+        <div class="text-center mt-8">
+            <nav class="space-x-4">
+                <a href="{{ url_for('trends.trends_page') }}"
+                   class="text-blue-600 hover:text-blue-800 font-medium">
+                    Tendencias
+                </a>
+                <span class="text-gray-300">|</span>
+                <a href="{{ url_for('hashtags.hashtags_page') }}" 
+                   class="text-blue-600 hover:text-blue-800 font-medium">
+                    Hashtags
+                </a>
+                <span class="text-gray-300">|</span>
+                <a href="{{ url_for('users.users_page') }}" 
+                   class="text-blue-600 hover:text-blue-800 font-medium">
+                    Usuarios
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Footer con información técnica -->
+    {% if debug %}
+    <div class="bg-gray-800 text-gray-300 py-4 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="text-sm">
+                <h4 class="font-medium mb-2">Información técnica:</h4>
+                <dl class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <div>
+                        <dt class="font-medium">Error ID:</dt>
+                        <dd class="font-mono">{{ error_id }}</dd>
+                    </div>
+                    <div>
+                        <dt class="font-medium">Timestamp:</dt>
+                        <dd class="font-mono">{{ timestamp }}</dd>
+                    </div>
+                    <div>
+                        <dt class="font-medium">Path:</dt>
+                        <dd class="font-mono">{{ request.path }}</dd>
+                    </div>
+                    <div>
+                        <dt class="font-medium">Method:</dt>
+                        <dd class="font-mono">{{ request.method }}</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Registrar errores no capturados
+    window.onerror = function(msg, url, line, col, error) {
+        console.error('Error no capturado:', {
+            message: msg,
+            url: url,
+            line: line,
+            column: col,
+            error: error,
+            timestamp: new Date().toISOString()
+        });
+        
+        // Enviar error al servidor si está configurado
+        if (typeof errorLoggingEndpoint !== 'undefined') {
+            fetch(errorLoggingEndpoint, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    type: 'uncaught_error',
+                    message: msg,
+                    url: url,
+                    line: line,
+                    column: col,
+                    stack: error ? error.stack : null,
+                    timestamp: new Date().toISOString()
+                })
+            }).catch(console.error);
+        }
+        
+        return false;
+    };
+});
+</script>
+{% endblock %}

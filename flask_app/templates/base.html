@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold">
+                    Ukraine Crisis Twitter Analysis
+                </div>
+                <div class="space-x-4">
+                    <a href="{{ url_for('trends.trends_page') }}" class="hover:text-gray-200">Tendencias</a>
+                    <a href="{{ url_for('hashtags.hashtags_page') }}" class="hover:text-gray-200">Hashtags</a>
+                    <a href="{{ url_for('users.users_page') }}" class="hover:text-gray-200">Usuarios</a>
+                    <a href="{{ url_for('geo.geo_page') }}" class="hover:text-gray-200">Geografía</a>
+                    <a href="{{ url_for('language.language_page') }}" class="hover:text-gray-200">Idiomas</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Ukraine Crisis Twitter Analysis</p>
+            <p class="mt-2">Juan Lucas Gordillo Hernández</p>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

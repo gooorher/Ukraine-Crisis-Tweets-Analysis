@@ -1,0 +1,33 @@
+
+INFORME DE MONITOREO
+==================================================
+
+Período de monitoreo:
+  Inicio: 2025-02-20 20:36:06.563673
+  Fin: 2025-02-20 20:36:30.828321
+  Duración: 24 segundos
+
+Estadísticas de MongoDB:
+  Base de datos: ukraine_crisis
+  Tamaño total: 2354.23 MB
+  Tweets almacenados: 3,965,278
+  Usuarios almacenados: 909,880
+
+Estadísticas del sistema:
+  CPU:
+    - Promedio: 13.2%
+    - Máximo: 21.6%
+  Memoria:
+    - Promedio: 76.1%
+    - Máximo: 76.6%
+  Disco:
+    - Uso: 51.8%
+
+Estadísticas de Flask:
+  Estado: Ejecutándose
+  CPU:
+    - Promedio: 0.5%
+    - Máximo: 0.8%
+  Memoria:
+    - Promedio: 0.2%
+    - Máximo: 0.2%
